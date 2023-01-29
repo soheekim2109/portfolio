@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block bodycontent %}
+    <div id="project-code"><a href="https://github.com/soheekim2109/portfolio">Source code</a></div>
+    <img id="project-img" src="static/img/portfolio_comp.jpg" alt="Screenshot of Portfolio">
+    <div>
+        <p>My portfolio website.</p>
+        <h2>Built with</h2>
+        <ul>
+            <li>AWS EB, EC2, ACM, Route 53</li>
+            <li>Python Flask</li>
+            <li>HTML, JS, CSS</li>
+        </ul>
+        <h2>Features</h2>
+        <ul>
+            <li>Responsive design (works on any screen)</li>
+            <li>Toggle dark mode (initially follows device setting, changes are saved to localStorage)</li>
+            <li>Looks cool (subjective)</li>
+        </ul>
+    </div>
+{% endblock %}

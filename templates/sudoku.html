@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block bodycontent %}
+    <div id="project-link"><a href="https://sudoku.soheekim.dev">Play it here</a></div>
+    <div id="project-code"><a href="https://github.com/soheekim2109/SudokuFlaskApp">Source code</a></div>
+    <img id="project-img" src="static/img/sudoku_comp.jpg" alt="Screenshot of Sudoku">
+    <div>
+        <p>Sudoku you can play online.</p>
+        <h2>Built with</h2>
+        <ul>
+            <li>Python Flask</li>
+            <li>HTML, JS, CSS</li>
+            <li>AWS EB</li>
+            <li>sudoku.js by robatron (for generating sudoku puzzle)</li>
+        </ul>
+        <h2>Features</h2>
+        <ul>
+            <li>Responsive design (works on any screen)</li>
+            <li>Difficulty levels</li>
+            <li>Write little numbers for guessing</li>
+            <li>Track time taken</li>
+            <li>Check if the solution is correct</li>
+            <li>Highlight wrong areas in red after checking the solution</li>
+            <li>Mouse/touch/keyboard input</li>
+        </ul>
+    </div>
+{% endblock %}

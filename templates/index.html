@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block indexheader %}
+    <h1 class="name-title">Sohee Kim</h1>
+    <div id="contact-container">
+        {% for item in contacts %}
+            <a href="{{ item.url }}">
+                <div class="contact-button">
+                    <img src="" alt="{{ item.alt }}" title="{{ item.title }}">
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+    <div id="header-down-arrow" class="unselectable">﹀</div>
+{% endblock %}
+
+{% block bodycontent %}
+    <h2 id="project-card-title">My Projects</h2>
+
+    {% for item in projects %}
+        <a href="{{ item.url }}" class="project-card-container remove-a-visual">
+            <img class="project-card-img unselectable" src="{{ item.img }}" alt="Screenshot of {{ item.title }}">
+            <div class="project-card-text-container">
+                <div class="project-card-title">{{ item.title }}</div>
+                <div class="project-card-desc">{{ item.desc }}</div>
+            </div>
+        </a>
+    {% endfor %}
+
+{% endblock %}

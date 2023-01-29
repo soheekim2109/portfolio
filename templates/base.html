@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% if indexpage %}
+            Sohee Kim
+        {% else %}
+            {{ title }} | Sohee Kim
+        {% endif %}
+    </title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+</head>
+<body>
+    {% if not indexpage %}
+        <a id="home-button" href="../">
+            <img src="" alt="Back to home" title="Back to home">
+        </a>
+    {% endif %}
+    <a id="theme-button" href="javascript:;" onclick="toggleDarkMode()">
+        <img src="" alt="Toggle dark mode" title="Toggle dark mode">
+    </a>
+
+    {% if indexpage %}
+        <header id="index-header">
+            <div>
+                {% block indexheader %}
+                {% endblock %}
+            </div>
+        </header>
+    {% endif %}
+
+    <div id="body-content">
+        {% if not indexpage %}
+            <header><h1 id="project-title">{{ title }}</h1></header>
+        {% endif %}
+
+        {% block bodycontent %}
+        {% endblock %}
+        <footer>&copy; 2023 Sohee Kim</footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
